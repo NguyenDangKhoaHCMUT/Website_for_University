@@ -136,18 +136,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
     import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
     import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-    //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDQk0PGIztg7qltOimH1_9_lLl5rluKsV8",
-      authDomain: "fir-d023a.firebaseapp.com",
-      databaseURL: "https://fir-d023a-default-rtdb.firebaseio.com",
-      projectId: "fir-d023a",
-      storageBucket: "fir-d023a.appspot.com",
-      messagingSenderId: "81322751429",
-      appId: "1:81322751429:web:eeb12e1ec56b1970c807ac",
-      measurementId: "G-KZQQJNVVWJ"
-    };
+    import { firebaseConfig } from "../firebase-config.js"
 
     const app = initializeApp(firebaseConfig);
     const db = getDatabase();
