@@ -4,7 +4,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
 
-import { firebaseConfig  } from "../../../firebase-config.js"; // Import your Firebase configuration
+import { firebaseConfig  } from "../chung/firebase-config.js"; // Import your Firebase configuration
 
 
 const app = initializeApp(firebaseConfig);

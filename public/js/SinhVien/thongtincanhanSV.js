@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebas
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL, deleteObject, listAll } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 import { getDatabase, set, ref, child, get, update, remove } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 import { getAuth} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-import { firebaseConfig  } from "../../../firebase-config.js"; // Import your Firebase configuration
+import { firebaseConfig  } from "../chung/firebase-config.js"; // Import your Firebase configuration
 
 const app = initializeApp(firebaseConfig);
 const realdb = getDatabase(app);

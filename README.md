@@ -65,7 +65,7 @@ firebase init
 ### Configuration
 1. Navigate to your Firebase project settings
 2. Copy your Firebase configuration
-3. Create a file `firebase-config.js` in the project root
+3. Create a file `firebase-config.js` in the `/public/js/chung` directory
 4. Paste your Firebase configuration
 
 ### Running Locally
