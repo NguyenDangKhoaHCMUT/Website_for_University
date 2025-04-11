@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Đăng kí quản trị viên</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- CSS tự thêm -->
+    <link rel="stylesheet" href="./css/QuanTriVien/registerADMIN.css">
+
+    <!-- JS tự thêm -->
+    <script src="./js/chung/DangXuat.js" type="module"></script>
+
+    <!-- Favicons -->
+    <link href="/img/D.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+  
+        <h1 class="logo me-auto"><a>Đăng kí quản trị viên</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+              <li><a class="active" href="HomeQTV.html">Home</a></li>
+              <li class="dropdown"><a href="#"><span>Chức năng</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                      <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                          <ul>
+                          <li><a href="#">Deep Drop Down 1</a></li>
+                          <li><a href="#">Deep Drop Down 2</a></li>
+                          <li><a href="#">Deep Drop Down 3</a></li>
+                          <li><a href="#">Deep Drop Down 4</a></li>
+                          <li><a href="#">Deep Drop Down 5</a></li>
+                          </ul>
+                      </li> -->
+                      <li><a href="registerADMIN.html">Đăng kí quản trị viên</a></li>
+                      <li><a href="monhoc.html">Chỉnh sửa học kì và môn học</a></li>
+                      <li><a href="modifySV.html">Chỉnh sửa sinh viên</a></li>
+                      <li><a href="modifyGV.html">Chỉnh sửa giảng viên</a></li>
+                      <li><a href="sap_xep_lop_hoc.html">Sắp xếp lớp học</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+        <a href="#" class="get-started-btn" id="signoutbutton">Đăng xuất</a>
+  
+    </div>
+  </header><!-- End Header -->
+  <main id="main" data-aos="fade-in">
+    <form id="MainForm">
+      <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            
+            <div class="col-md-5 border-right col-centered">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Thêm quản trị viên</h4>
+                    </div>
+                    <div class="row-mt-2">
+                     
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Họ và tên</label><input type="text"
+                                class="form-control" placeholder="" value="" id="nameInp" ></div>
+                        <div class="col-md-6"><label class="labels">Email</label><input type="text"
+                                class="form-control" value="" placeholder="example@hcmut.edu.vn" id="emailInp"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Mã số QTV</label><input type="text"
+                                class="form-control" placeholder="Định dạng: QTV_number" value="" id="idInp"></div>
+                        <div class="col-md-6"><label class="labels">Password</label><input type="text"
+                                class="form-control" value="" placeholder="" id="passwordInp"></div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit"
+                      id="UpdBtn">Đăng kí tài khoản</button>
+              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+  </form>
+</main><!-- End #main -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDQk0PGIztg7qltOimH1_9_lLl5rluKsV8",
+      authDomain: "fir-d023a.firebaseapp.com",
+      databaseURL: "https://fir-d023a-default-rtdb.firebaseio.com",
+      projectId: "fir-d023a",
+      storageBucket: "fir-d023a.appspot.com",
+      messagingSenderId: "81322751429",
+      appId: "1:81322751429:web:eeb12e1ec56b1970c807ac",
+      measurementId: "G-KZQQJNVVWJ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const auth = getAuth(app);
+    //const analytics = getAnalytics(app);
+
+    let EmailInp = document.getElementById('emailInp');
+    let PassInp = document.getElementById('passwordInp');
+    let NameInp = document.getElementById('nameInp');
+    let IdInp = document.getElementById('idInp');
+    let MainForm = document.getElementById('MainForm');
+
+    let RegisterUser = evt => {
+      evt.preventDefault();
+
+      createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+        .then((credentials) => {
+          set(ref(db, 'QuanTriVien/' + IdInp.value), {
+            ho_va_ten: NameInp.value,
+            email: EmailInp.value,
+            mat_khau: PassInp.value,
+            id: IdInp.value
+          })
+          alert("Đăng ký thành công!")
+        }
+
+        )
+        .catch((error) => {
+          alert(error.message);
+          console.log(error.code);
+          console.log(error.message);
+        });
+
+    }
+    let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+    let MsgHead = document.getElementById("msg");
+    let GreetHead = document.getElementById("greet");
+    MainForm.addEventListener('submit', RegisterUser);
+  </script>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Sắp xếp lớp học</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- CSS tự thêm -->
+    <link rel="stylesheet" href="./css/QuanTriVien/sap_xep_lop_hoc.css">
+
+    <!-- JS tự thêm -->
+    <script src="./js/QuanTriVien/angular.min.js"></script>
+    <script src="./js/QuanTriVien/angular-route.min.js"></script>
+    <script src="./js/QuanTriVien/app.js"></script>
+    <script src="./js/QuanTriVien/checkmk.js"></script>
+    <script src="./js/chung/DangXuat.js" type="module"></script>
+    <script src="./js/QuanTriVien/sap_xep_lop_hoc.js" type="module"></script>
+
+    <!-- Favicons -->
+    <link href="/img/D.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body ng-app="myapp" ng-controller="homeCtrl">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+      
+            <h1 class="logo me-auto"><a>Chỉnh sửa giảng viên</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      
+            <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                  <li><a class="active" href="HomeQTV.html">Home</a></li>
+                  <li class="dropdown"><a href="#"><span>Chức năng</span> <i class="bi bi-chevron-down"></i></a>
+                      <ul>
+                          <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                              <ul>
+                              <li><a href="#">Deep Drop Down 1</a></li>
+                              <li><a href="#">Deep Drop Down 2</a></li>
+                              <li><a href="#">Deep Drop Down 3</a></li>
+                              <li><a href="#">Deep Drop Down 4</a></li>
+                              <li><a href="#">Deep Drop Down 5</a></li>
+                              </ul>
+                          </li> -->
+                          <li><a href="registerADMIN.html">Đăng kí quản trị viên</a></li>
+                          <li><a href="monhoc.html">Chỉnh sửa học kì và môn học</a></li>
+                          <li><a href="modifySV.html">Chỉnh sửa sinh viên</a></li>
+                          <li><a href="modifyGV.html">Chỉnh sửa giảng viên</a></li>
+                          <li><a href="sap_xep_lop_hoc.html">Sắp xếp lớp học</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+      
+            <a href="#" class="get-started-btn" id="signoutbutton">Đăng xuất</a>
+      
+        </div>
+      </header><!-- End Header -->
+      <main id="main" data-aos="fade-in">
+        <form id="MainForm">
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-4 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right" id="msg"></h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12"><label class="labels">Đợt đăng kí môn hiện tại</label><input type="text"
+                                    class="form-control" placeholder="" value="" id="dot_dki" readonly></div>
+                            <div class="col-md-12">
+                                <div class="mt-5 text-center">
+                                    <button class="btn btn-primary profile-button" type="button"
+                                    id="updkiBtn">Chuyển đợt</button>
+                                    <button class="btn btn-primary profile-button" type="button" id="closeBtn" style="display: none;">Mở/Kết thúc đợt</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Mã môn học</label><input type="text"
+                                    class="form-control" value="" placeholder="" id="idInp" ></div>
+                            <div class="col-md-6"><label class="labels">Sĩ số tối thiểu</label><input type="text"
+                                class="form-control" value="" placeholder="" id="min_numofsvInp" readonly></div>
+                        </div>
+                        <div class="col-md-12"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                            id="findBtn">Tìm kiếm môn học</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">QUẢN TRỊ VIÊN TIẾN HÀNH SẮP XẾP LỚP HỌC</h4>
+
+                        </div>
+                        <p class="text-right">Lưu ý: Chỉ có thể chỉnh sửa các thông tin bên dưới khi đang trong giai đoạn ĐÓNG ĐỢT 1</p>
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Số lượng lớp học</label><input type="text"
+                                    class="form-control" placeholder="" value="" id="numofclassInp" ></div>
+                            <div class="col-md-6"><label class="labels">Sĩ số mỗi lớp</label><input type="text"
+                                    class="form-control" placeholder="" value="" id="sisoInp" ></div>
+                        </div>
+                        <p class="text-right">Lưu ý: Mỗi giảng viên cách nhau bởi dấu '-' ví dụ: GV001-GV002-GV003</p>
+                        <div class="row mt-2">
+                            <div class="col-md-12"><label class="labels">Đăng kí giảng viên giảng dạy cho từng lớp</label><input type="text"
+                                class="form-control" placeholder="" value="" id="dkigvInp" ></div>
+                                <div class="col-md-6"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                                    id="AddBtn">Đăng kí lớp học</button></div>
+                                </div>
+                                <div class="col-md-6"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                                    id="UpdBtn">Cập nhật thông tin</button></div>
+                                </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">QUẢN TRỊ VIÊN TIẾN HÀNH SẮP XẾP THỜI GIAN VÀ ĐỊA ĐIỂM CHO TỪNG LỚP HỌC</h4>
+                        </div>
+                        <p class="text-right">Lưu ý: Chỉ có thể chỉnh sửa các thông tin bên dưới khi đang trong giai đoạn ĐÓNG ĐỢT 2</p>
+                        <div class="row mt-2">
+                                <div class="col-md-12"><label class="labels">Thông tin tuần học cho môn học này</label><input type="text"
+                                    class="form-control" value="" placeholder="" id="tuan_hoc"></div>
+                                <div class="col-md-12"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                                    id="submit_tuan_hoc">Xác nhận</button></div>
+                                </div>
+                                <div class="col-md-12"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                                    id="Sche">Sắp xếp thời khóa biểu</button></div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </form>
+    </main><!-- End #main -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
